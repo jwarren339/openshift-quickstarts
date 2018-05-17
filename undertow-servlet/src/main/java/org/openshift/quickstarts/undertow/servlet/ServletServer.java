@@ -63,6 +63,9 @@ public class ServletServer {
             DeploymentManager manager = defaultContainer().addDeployment(servletBuilder);
             manager.deploy();
 
+            InetAddress localhost = InetAddress.getLocalHost();
+            System.out.println("System IP Address : " + (localhost.getHostAddress()).trim());
+            
             SSLContext sslContext = null;
             String filename = System.getenv("HTTPS_KEYSTORE");
             if (filename != null) {
