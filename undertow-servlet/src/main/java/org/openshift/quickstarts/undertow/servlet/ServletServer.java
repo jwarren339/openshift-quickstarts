@@ -47,7 +47,9 @@ public class ServletServer {
 
     public static void main(final String[] args) {
         try {
-
+            InetAddress localhost = InetAddress.getLocalHost();
+                  System.out.println("System IP Address : " + (localhost.getHostAddress()).trim());
+            
             DeploymentInfo servletBuilder = deployment()
                     .setClassLoader(ServletServer.class.getClassLoader())
                     .setContextPath(MYAPP)
@@ -62,9 +64,6 @@ public class ServletServer {
 
             DeploymentManager manager = defaultContainer().addDeployment(servletBuilder);
             manager.deploy();
-
-            InetAddress localhost = InetAddress.getLocalHost();
-            System.out.println("System IP Address : " + (localhost.getHostAddress()).trim());
             
             SSLContext sslContext = null;
             String filename = System.getenv("HTTPS_KEYSTORE");
