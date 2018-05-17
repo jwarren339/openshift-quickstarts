@@ -48,7 +48,6 @@ public class MessageServlet extends HttpServlet {
         writer.write(message);
         writer.write("<HTML><H1>Hello there</H1>");
         writer.write("<H2>IP ADDR</H2>");
-        writer.write(InetAddress.getLocalHost().getHostAddress());
         writer.write("</HTML>");
         writer.close();
     }
