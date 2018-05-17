@@ -26,6 +26,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.net.InetAddress;
 
 /**
  * @author Stuart Douglas
@@ -35,7 +36,9 @@ public class MessageServlet extends HttpServlet {
     public static final String MESSAGE = "message";
 
     private String message;
-
+    
+    InetAddress localhost = InetAddress.getLocalHost();
+    
     @Override
     public void init(final ServletConfig config) throws ServletException {
         super.init(config);
