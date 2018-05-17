@@ -65,11 +65,6 @@ public class ServletServer {
 
             SSLContext sslContext = null;
             String filename = System.getenv("HTTPS_KEYSTORE");
-            
-            InetAddress localhost = InetAddress.getLocalHost();
-            System.out.println("System IP Address : " +
-                      (localhost.getHostAddress()).trim());
-
             if (filename != null) {
                 String directory = System.getenv("HTTPS_KEYSTORE_DIR");
                 char[] password = System.getenv("HTTPS_PASSWORD").toCharArray();
