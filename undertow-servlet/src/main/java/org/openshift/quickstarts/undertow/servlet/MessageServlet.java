@@ -46,7 +46,7 @@ public class MessageServlet extends HttpServlet {
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
         writer.write(message);
-        writer.write("<HTML><H1>Test html</H1></HTML>");
+        writer.write("<HTML><H1>Todays Date</H1><!--#echo var="DATE_LOCAL" --></HTML>");
         writer.close();
     }
 
