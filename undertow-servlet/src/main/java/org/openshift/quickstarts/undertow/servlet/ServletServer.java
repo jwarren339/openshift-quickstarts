@@ -47,9 +47,6 @@ public class ServletServer {
 
     public static void main(final String[] args) {
         try {
-            InetAddress localhost = InetAddress.getLocalHost();
-                  System.out.println("System IP Address : " + (localhost.getHostAddress()).trim());
-            
             DeploymentInfo servletBuilder = deployment()
                     .setClassLoader(ServletServer.class.getClassLoader())
                     .setContextPath(MYAPP)
