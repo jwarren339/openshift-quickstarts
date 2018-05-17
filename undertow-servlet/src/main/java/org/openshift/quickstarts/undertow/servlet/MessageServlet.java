@@ -45,7 +45,11 @@ public class MessageServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
+        writer.write("<HTML>");
+        writer.write("<H1>Hello Ohio</H1>");
+        
         writer.write(message);
+        writer.write("</HTML>");
         writer.close();
     }
 
