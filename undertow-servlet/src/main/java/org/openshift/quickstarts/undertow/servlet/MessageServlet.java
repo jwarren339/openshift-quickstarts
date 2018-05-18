@@ -57,7 +57,10 @@ public class MessageServlet extends HttpServlet {
         try {
             ip = InetAddress.getLocalHost();
             hostname = ip.getHostName();
-            writer.write("<H1>Your current IP address : " + ip + "</H1>");
+            String[]output = ip.split("/");
+            
+            writer.write("<H1>Your current IP address : " + output[1] + "</H1>");
+            
             writer.write("<H1>Your current Hostname : " + hostname + "</H1>");
  
         } catch (UnknownHostException e) {
@@ -66,7 +69,7 @@ public class MessageServlet extends HttpServlet {
             writer.write("<H2>ERROR Getting Local Host Name</H2>");
         }
 
-        writer.write("<H2>Hello there:" + message + "</H2>");
+        writer.write("<H2>Hello there: " + message + "</H2>");
         writer.write("</HTML>");
         writer.close();
     }
