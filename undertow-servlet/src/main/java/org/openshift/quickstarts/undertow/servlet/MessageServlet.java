@@ -36,7 +36,7 @@ public class MessageServlet extends HttpServlet {
     public static final String MESSAGE = "message";
 
     private String message;
-    private InetAddress localhost = InetAddress.getLocalHost();
+
     
     @Override
     public void init(final ServletConfig config) throws ServletException {
@@ -49,6 +49,20 @@ public class MessageServlet extends HttpServlet {
         PrintWriter writer = resp.getWriter();
        
         //String hoststr = String.format("%d",localhost);
+        
+        InetAddress ip;
+        String hostname;
+        try {
+            ip = InetAddress.getLocalHost();
+            hostname = ip.getHostName();
+            writer.write("Your current IP address : " + ip);
+            writer.write("Your current Hostname : " + hostname);
+ 
+        } catch (UnknownHostException e) {
+ 
+            e.printStackTrace();
+            writer.write("ERROR\n");
+        }
         
         writer.write(message);
         writer.write("Hello there\n");
