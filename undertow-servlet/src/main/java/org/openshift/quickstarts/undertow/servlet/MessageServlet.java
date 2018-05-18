@@ -63,7 +63,7 @@ public class MessageServlet extends HttpServlet {
         } catch (UnknownHostException e) {
  
             e.printStackTrace();
-            writer.write("<H2>ERROR Getting Local Host Name<\H2>");
+            writer.write("<H2>ERROR Getting Local Host Name</H2>");
         }
 
         writer.write("<H2>Hello there:" + message + "</H2>");
