@@ -57,9 +57,9 @@ public class MessageServlet extends HttpServlet {
         try {
             ip = InetAddress.getLocalHost();
             hostname = ip.getHostName();
-            String[]output = ip.split("/");
+            hostaddr = ip.getHostAddress();
             
-            writer.write("<H1>Your current IP address : " + output[1] + "</H1>");
+            writer.write("<H1>Your current IP address : " + hostaddr + "</H1>");
             
             writer.write("<H1>Your current Hostname : " + hostname + "</H1>");
  
