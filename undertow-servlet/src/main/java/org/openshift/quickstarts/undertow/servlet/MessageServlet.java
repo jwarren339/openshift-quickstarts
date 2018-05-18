@@ -58,9 +58,8 @@ public class MessageServlet extends HttpServlet {
             writer.write("Your current IP address : " + ip);
             writer.write("Your current Hostname : " + hostname);
  
-        } catch (UnknownHostException e) {
+        } catch () {
  
-            e.printStackTrace();
             writer.write("ERROR\n");
         }
         
