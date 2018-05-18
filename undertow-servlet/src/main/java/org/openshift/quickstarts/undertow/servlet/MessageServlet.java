@@ -36,7 +36,7 @@ public class MessageServlet extends HttpServlet {
     public static final String MESSAGE = "message";
 
     private String message;
-  
+    private InetAddress localhost = InetAddress.getLocalHost();
     
     @Override
     public void init(final ServletConfig config) throws ServletException {
@@ -47,14 +47,12 @@ public class MessageServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-        //InetAddress localhost = InetAddress.getLocalHost();
+       
         //String hoststr = String.format("%d",localhost);
         
         writer.write(message);
-        writer.write("<HTML><H1>Hello there</H1>");
-        writer.write("<H2>IP Addr</H2>");
-        writer.write("</HTML>");
-        //writer.write(hoststr);
+        writer.write("Hello there\n");
+        writer.write("IP Addr" + localhost);
         writer.close();
     }
 
