@@ -38,7 +38,6 @@ public class MessageServlet extends HttpServlet {
     private String message;
     
     InetAddress localhost = InetAddress.getLocalHost();
-    String myHost = localhost.getHostAddress();
     
     @Override
     public void init(final ServletConfig config) throws ServletException {
@@ -53,7 +52,7 @@ public class MessageServlet extends HttpServlet {
         writer.write("<HTML><H1>Hello there</H1>");
         writer.write("<H2>IP Address</H2>");
         writer.write("</HTML>");
-        writer.write(myHost);
+        writer.write(localhost);
         writer.close();
     }
 
