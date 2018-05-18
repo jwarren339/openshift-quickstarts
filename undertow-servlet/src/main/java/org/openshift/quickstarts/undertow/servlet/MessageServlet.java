@@ -48,7 +48,8 @@ public class MessageServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-        String hoststr = localhost;
+        String hoststr = String.format("%d",localhost);
+        
         writer.write(message);
         writer.write("<HTML><H1>Hello there</H1>");
         writer.write("<H2>IP Address</H2>");
