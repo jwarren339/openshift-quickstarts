@@ -27,6 +27,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * @author Stuart Douglas
@@ -58,11 +59,11 @@ public class MessageServlet extends HttpServlet {
             writer.write("Your current IP address : " + ip);
             writer.write("Your current Hostname : " + hostname);
  
-        } catch () {
+        } catch (UnknownHostException e) {
  
+            e.printStackTrace();
             writer.write("ERROR\n");
         }
-        
         writer.write(message);
         writer.write("Hello there\n");
         writer.write("IP Addr" + localhost);
