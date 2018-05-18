@@ -57,16 +57,16 @@ public class MessageServlet extends HttpServlet {
         try {
             ip = InetAddress.getLocalHost();
             hostname = ip.getHostName();
-            writer.write("\nYour current IP address : " + ip);
-            writer.write("\nYour current Hostname : " + hostname);
+            writer.write("<H1>Your current IP address : " + ip + "</H1>");
+            writer.write("<H1>Your current Hostname : " + hostname + "</H1>");
  
         } catch (UnknownHostException e) {
  
             e.printStackTrace();
-            writer.write("ERROR Getting Local Host Name\n");
+            writer.write("<H2>ERROR Getting Local Host Name<\H2>");
         }
 
-        writer.write("\n\nHello there:" + message);
+        writer.write("<H2>Hello there:" + message + "</H2>");
         writer.write("</HTML>");
         writer.close();
     }
