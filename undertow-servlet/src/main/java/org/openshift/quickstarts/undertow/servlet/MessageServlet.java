@@ -53,6 +53,8 @@ public class MessageServlet extends HttpServlet {
         
         InetAddress ip;
         String hostname;
+        String hostaddr;
+        
         writer.write("<HTML>");
         try {
             ip = InetAddress.getLocalHost();
