@@ -66,7 +66,7 @@ public class MessageServlet extends HttpServlet {
         }
         writer.write(message);
         writer.write("Hello there\n");
-        writer.write("IP Addr" + localhost);
+        writer.write("IP Addr" + ip);
         writer.close();
     }
 
