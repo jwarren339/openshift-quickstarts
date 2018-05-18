@@ -52,9 +52,9 @@ public class MessageServlet extends HttpServlet {
         
         writer.write(message);
         writer.write("<HTML><H1>Hello there</H1>");
-        writer.write("<H2>IP Address</H2>");
+        writer.write("<H2>IP Addr</H2>");
         writer.write("</HTML>");
-        writer.write(hoststr);
+        //writer.write(hoststr);
         writer.close();
     }
 
