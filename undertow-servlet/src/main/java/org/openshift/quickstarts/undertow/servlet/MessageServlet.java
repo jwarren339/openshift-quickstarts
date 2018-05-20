@@ -61,9 +61,9 @@ public class MessageServlet extends HttpServlet {
             hostname = ip.getHostName();
             hostaddr = ip.getHostAddress();
             
-            writer.write("<H1>Host IP :  " + hostaddr + "</H1>");
+            writer.write("<H1>Host IP:  " + hostaddr + "</H1>");
             
-            writer.write("<H1>Hostname : " + hostname + "</H1>");
+            writer.write("<H1>Hostname: " + hostname + "</H1>");
  
         } catch (UnknownHostException e) {
  
