@@ -28,7 +28,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Scanner;
+import java.util.Scanner;
 
 /**
  * @author Stuart Douglas
@@ -73,8 +73,8 @@ public class MessageServlet extends HttpServlet {
         }
 
         writer.write("<H2>Message: " + message + "</H2>");
-        Scanner sc=new Scanner(System.in);
-        String name=sc.next();
+        Scanner sc=new Scanner(System.in);
+        String name=sc.next();
         writer.write("You entered: " + name);
         writer.write("</HTML>");
         writer.close();
